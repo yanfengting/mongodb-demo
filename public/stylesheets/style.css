@@ -1,0 +1,65 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+table{
+  width: 90%;
+  border-collapse:collapse; 
+}
+
+th,td{
+  height:40px;
+  border:1px dotted blueviolet;/* 虚线 */
+  text-align: center;
+}
+th:nth-of-type(1){
+  width: 200px;
+}
+.pager{
+  margin-top: 10px;
+  border-radius: 3px;
+}
+.pager a{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #222;
+  color: #fff;
+  text-align:center;
+  text-decoration: none;
+}
+a.active{
+  background-color: blue;
+}
+.search{
+  margin-bottom: 10px;
+}
+
+.search input{
+  border: 1px solid blue;
+  outline:none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 3px;
+}
+.search select{
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 3px;
+}
+
+.search button{
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  line-height: 20px;
+  border: 1px solid blue;
+  background-color: blue;
+  border-radius: 3px;
+  color: #fff;
+}

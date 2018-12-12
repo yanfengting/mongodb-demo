@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div class="search">
+      <form action="/">
+        <label for="name" >姓名：</label>
+        <input type="text" name="name" id="name">
+        <label for="name" >性别：</label>
+        <select name="sex" id="sex">
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+   
+    <table>
+      <tr>
+        <th>主键</th>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>性别</th>
+
+      </tr>
+      <%for(var i=0;i < users.length;i++){%>
+      <tr>
+        <td><%=users[i]._id%></td>
+        <td><%=users[i].name%></td>
+        <td><%=users[i].password%></td>
+        <td><%=users[i].sex ? '男' : '女'%></td>
+      </tr>
+      <%}%>
+    </table>
+    <div class='pager'>
+      <!--<a href="/1"></a>
+      <a href="/2"></a>
+      <a href="/3"></a>
+      <a href="/4"></a>
+      <a href="/5"></a> -->
+      <a href="/1" class="<%= page==1?'active' :'' %>">1</a>
+      <a href="/2" class="<%= page==2?'active' :'' %>">2</a>
+      <a href="/3" class="<%= page==3?'active' :'' %>">3</a>
+      <a href="/4" class="<%= page==4?'active' :'' %>">4</a>
+      <a href="/5" class="<%= page==5?'active' :'' %>">5</a>
+
+    </div>
+  </body>
+</html>
